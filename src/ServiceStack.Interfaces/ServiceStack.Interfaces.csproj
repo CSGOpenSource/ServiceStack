@@ -58,7 +58,7 @@
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>servicestack-sn.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>..\ServiceStack.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Signed|AnyCPU'">
     <OutputPath>bin\Signed\</OutputPath>
@@ -497,6 +497,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\ServiceStack.snk">
+      <Link>ServiceStack.snk</Link>
+    </None>
     <None Include="Redis\Redis.cd" />
     <None Include="servicestack-sn.pfx" />
   </ItemGroup>
